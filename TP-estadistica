@@ -2,7 +2,7 @@
 ################# Funciones Utiles para el Trabajo ################
 ###################################################################
 
-#generamos una funci髇 para la  distribuci髇 Poisson
+#generamos una funci贸n para la  distribuci贸n Poisson
 muestra_estimadores <- function(m,n,lambda){
   muestra<-vector(length = m)
   for(i in 1:m){
@@ -13,7 +13,7 @@ muestra_estimadores <- function(m,n,lambda){
   }
   return(muestra)  
 }
-#generamos una funci髇 para la  distribuci髇 Gamma
+#generamos una funci贸n para la  distribuci贸n Gamma
 muestra_estimadoresgamma <- function(m,n,alpha, beta){
   muestra<-vector(length = m)
   for(i in 1:m){
@@ -25,7 +25,7 @@ muestra_estimadoresgamma <- function(m,n,alpha, beta){
   return(muestra)  
 }
 
-#generamos una funci髇 para la  distribuci髇 Normal
+#generamos una funci贸n para la  distribuci贸n Normal
 muestra_estimadoresnormal <- function(m,n,mu,desvio){
   muestra<-vector(length = m)
   for(i in 1:m){
@@ -36,7 +36,7 @@ muestra_estimadoresnormal <- function(m,n,mu,desvio){
   }
   return(muestra)  
 }
-#generamos una funci髇 para la  distribuci髇 Cauchy
+#generamos una funci贸n para la  distribuci贸n Cauchy
 muestra_estimadorescauchy <- function(m,n,xcero, gamma){
   muestra<-vector(length = m)
   for(i in 1:m){
@@ -65,7 +65,7 @@ for(i in 1:length(rlamb)){
   
   for(j in 1:length(rn)){
     n<-rn[j]
-    #El codigo puede demorar algunos minutos, segun el rango de n y el tama駉 de
+    #El codigo puede demorar algunos minutos, segun el rango de n y el tama帽o de
     #las muestras, por eso se incorpora el siguiente contador de avance para
     #tener un estimativo del tiempo restante.(sale por la consola)
     print(paste( "porcentaje de avance: ",round(((i-1)*length(rn) + j)*100/(length(rlamb)*length(rn)),digits=2),"%",sep=" "))
